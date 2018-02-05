@@ -31,9 +31,9 @@ It would be very helpful to pull a list of errors from the server, if not get th
 
 Informative error handling during Dapp development is very important imho and my one of the biggest fails on Ethereum in my opinion, so it would be nice if we could do better here.
 
-### When can we expect decouple the 1-to-1 relationship for accounts and nodes?
+### When can we expect the abandoning of the 1-to-1 relationship for accounts and nodes?
 
-As we were told in the oracles-core channel, the coupling is one oracle per account. At the moment it is one account per node. When would this be changed?
+As we were told in the oracles-core channel, the coupling is one oracle per account. At the moment it is one account per node. Can you tell us when this can be expected to be changed?
 
 ### Public Websocket port, Webserver configuration, CORS Headers?
 If understand the concept right, the websockets are not supposed to be exposed to the web in the future? Anyway, for development purposes it is important to be able to talk to an oracle via the browser in my opinion. Everyone who wants to build web clients for the oracles, has to set up an Nginx/Apache proxy that provides valid CORS headers and expose the Websocket port. It would be nice if we could have a starter setup for our users and the internal developers.
