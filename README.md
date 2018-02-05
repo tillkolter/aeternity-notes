@@ -6,6 +6,10 @@
 
 We know that we must wait for a block to be mined before we can progress to the next stage the various operations we make. However it's still possible that a transaction can become invalid due to being on a chain which is orphaned. What do you envisage as the right way to handle for a client application? When can we truly assume that a transaction has succeeded, and what do we do if we discover that something we'd relied upon is no longer valid? If these are corner cases which we think will only occur very infrequently, can we put numbers on that?
 
+### How can we get access to the transaction hash for an oracle registration?
+
+Increased mining block height should not be taken as a proof that an oracle has been successfully registered. The transaction could either fail or even not be mined yet due to network congestion. During the time of the Cryptokitties and ICO hypes, high network traffic recently led to a state, where transactions could not even be expected to be broadcasted to the network for more that 15 minutes (independently of the actual fees). How I understand it, that means, that the registering account needs to keep track of the TX hash or an id to make sure, that the oracle *really* has been registered.
+
 ### Mining speed 
 Related: we have sped up mining speed on our test network to one block on average every 15 seconds, which makes life much easier. Since TTLs are expressed in blocks, speeding up the mining speed on the main net after launch will cause a great many assumptions to become invalid, things to expire before they're anticipated, and so on. What's current thinking in the core team about this?
 
@@ -38,23 +42,9 @@ As we were told in the oracles-core channel, the coupling is one oracle per acco
 ### Public Websocket port, Webserver configuration, CORS Headers?
 If I understand the concept right, the websockets are not supposed to be exposed to the web in the future? Anyway, for development purposes it is important to be able to talk to an oracle via the browser in my opinion. Everyone who wants to build web clients for the oracles, has to set up an Nginx/Apache proxy that provides valid CORS headers and expose the Websocket port. It would be nice if we could have a starter setup for our users and the internal developers.
 
-
 ### What are the lower boundary points for the delta TTLs specifications?
 
 Is the mining block time the starting point for the delta or the block time of the broadcasting node? It seemed to me, that sometimes I received almost instantly ttl expirations errors and sometimes the query/response pairs seemed to live even longer than expected.
-
-# The questions below are rewritten above--please check the point is still adequately made.
-
-
-### How can we get access to the transaction hash for an oracle registration?
-
-Increased mining block height should not be taken as a proof that an oracle has been successfully registered. The transaction could either fail or even not be mined yet due to network congestions. How I understand it, that means, that the registering account needs to keep track of the TX hash or an id to make sure, that the oracle *really* has been registered.
-
-### Should we consider a minimum amount of mined blocks before an oracle answer is accepted to be `true`?
-
-Would it make sense to freeze an answer to make sure, that malicious node dont broadcast false answers?
-
-
 
 ### How are oracle providers meant to be implemented?
 
