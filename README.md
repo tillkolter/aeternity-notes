@@ -50,7 +50,7 @@ Is the mining block time the starting point for the delta or the block time of t
 
 Right now we implemented examples for Python/NodeJS and Browser. Does this even make sense if the input/output formats are later to be specified as types of the smart contract language. Can we cast to these types later or do the oracles themselves have to be ported to the smart contract language?
 
-### Speaking of formats
+### Speaking of formats...
 
-Are the formats expected to be atomic types or is it also possible to have tuples? 
+Are the formats expected to be atomic types or will it also be possible to have tuples? 
 
