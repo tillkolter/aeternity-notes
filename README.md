@@ -32,8 +32,11 @@ I wonder if this is a philosophical issue--it seems to me that the current logic
 
 It would be very helpful to pull a list of errors from the server, if not get them as they occur.
 
-
 Informative error handling during Dapp development is very important imho and my one of the biggest fails on Ethereum in my opinion, so it would be nice if we could do better here.
+
+### When will the oracles endpoints be implemented?
+
+To be able to write more useful showcases, we need to be able to pull more data about oracles already living on the chain. Can you give us expected dates when these endpoints will be implemented? 
 
 ### When can we expect the abandoning of the 1-to-1 relationship for accounts and nodes?
 
